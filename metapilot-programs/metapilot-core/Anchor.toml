@@ -1,0 +1,42 @@
+[toolchain]
+anchor_version = "0.30.1"
+
+[build]
+verifiable = false
+idl-build = false
+seeds = false
+skip-lint = false
+
+[features]
+resolution = true
+skip-lint = false
+
+[programs.localnet]
+dao_voting = "CSxir1KkCbcKZpmUuEouTL4uLzwL4C7MTYyZrkxcKjv1"
+token_automation = "C7QmRHfSMg9YtcFyjGdfqA1PxBjZzefxxsBNggFTgcqR"
+yield_optimizer = "uZWfyq9bwsiHUhLNXZKXEHkkbCpiin7Y3HvYNHDX4WQ"
+transaction_scheduler = "E4vpdUcGQd9bnzePzwJPKFNxrA5WARgFVzm77zfh2Hpe"
+
+[programs.devnet]
+dao_voting = "CSxir1KkCbcKZpmUuEouTL4uLzwL4C7MTYyZrkxcKjv1"
+token_automation = "C7QmRHfSMg9YtcFyjGdfqA1PxBjZzefxxsBNggFTgcqR"
+yield_optimizer = "uZWfyq9bwsiHUhLNXZKXEHkkbCpiin7Y3HvYNHDX4WQ"
+transaction_scheduler = "E4vpdUcGQd9bnzePzwJPKFNxrA5WARgFVzm77zfh2Hpe"
+
+[registry]
+url = "https://api.apr.dev"
+
+[provider]
+cluster = "Localnet"
+wallet = "~/.config/solana/id.json"
+
+[scripts]
+test = "yarn run mocha -t 1000000 tests/"
+
+[workspace]
+members = [
+    "programs/dao-voting",
+    "programs/token-automation", 
+    "programs/yield-optimizer",
+    "programs/transaction-scheduler"
+]

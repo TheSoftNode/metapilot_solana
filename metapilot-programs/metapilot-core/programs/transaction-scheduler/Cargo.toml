@@ -1,0 +1,30 @@
+[package]
+name = "transaction-scheduler"
+version = "0.1.0"
+description = "MetaPilot Transaction Scheduling and Gas Optimization Program"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "transaction_scheduler"
+
+[features]
+no-entrypoint = []
+no-idl = []
+no-log-ix-name = []
+cpi = ["no-entrypoint"]
+default = []
+idl-build = ["anchor-lang/idl-build", "anchor-spl/idl-build"]
+custom-heap = []
+custom-panic = []
+anchor-debug = []
+
+[dependencies]
+anchor-lang = "0.30.1"
+anchor-spl = "0.30.1"
+solana-program = "1.18"
+spl-token = "3.5"
+borsh = "0.10"
+arrayref = "0.3"
+num-derive = "0.4"
+num-traits = "0.2"

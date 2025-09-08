@@ -1,0 +1,53 @@
+{
+  "network": "localnet",
+  "deployment_version": "1.0.0",
+  "programs": {
+    "dao-voting": {
+      "program_id": "CSxir1KkCbcKZpmUuEouTL4uLzwL4C7MTYyZrkxcKjv1",
+      "status": "deployed",
+      "signature": "2ii1bTUstFQfQb6gP7AaS9ewaXGBZTTuuXTUyemtSXoKudzxUYdTZbX1JFwdNc8MyYkdiyzXYgaP2TftAz4QkPPf",
+      "deployed_at": "2025-08-23T11:37:42Z",
+      "deployer": "7seqthRHFrM9xP6dZAHv6KQH9An9rVvJaVp6wssG8rY5",
+      "binary_path": "target/deploy/dao_voting.so",
+      "description": "MetaPilot DAO Voting Automation Program"
+    },
+    "token-automation": {
+      "program_id": "C7QmRHfSMg9YtcFyjGdfqA1PxBjZzefxxsBNggFTgcqR",
+      "status": "deployed",
+      "signature": "4BJ89NQ2E22dj1hLo7j9MCqqxmMcFjXtEE3ftZVwtytcDJKv7E4f3KkrL1kMaoYt6bsBbwv4uK7iwmvzpYvqAr6x",
+      "deployed_at": "2025-08-23T11:37:52Z",
+      "deployer": "7seqthRHFrM9xP6dZAHv6KQH9An9rVvJaVp6wssG8rY5",
+      "binary_path": "target/deploy/token_automation.so",
+      "description": "MetaPilot Token Trading and Swap Automation Program"
+    },
+    "yield-optimizer": {
+      "program_id": "uZWfyq9bwsiHUhLNXZKXEHkkbCpiin7Y3HvYNHDX4WQ",
+      "status": "deployed",
+      "signature": "42X4CbFzGooGfEgrsHBhU9ry4kueZ5xFHCKBej594E4oZMF4CkuYRSD8MiyR5MragKCbUZ8wgW6jobCmxtQvDNQ9",
+      "deployed_at": "2025-08-23T12:45:18Z",
+      "deployer": "7seqthRHFrM9xP6dZAHv6KQH9An9rVvJaVp6wssG8rY5",
+      "binary_path": "target/deploy/yield_optimizer.so",
+      "description": "MetaPilot Yield Farming and DeFi Strategy Optimization Program"
+    },
+    "transaction-scheduler": {
+      "program_id": "E4vpdUcGQd9bnzePzwJPKFNxrA5WARgFVzm77zfh2Hpe",
+      "status": "deployed",
+      "signature": "3cE77guo3vEVMvmaezSSeySzPVQAE7gjpjG3cpjhqMSmcpj112cqwsyZHG1U3EStr77uqdfCBSXNWgHoF7nFi9gb",
+      "deployed_at": "2025-08-23T12:45:25Z",
+      "deployer": "7seqthRHFrM9xP6dZAHv6KQH9An9rVvJaVp6wssG8rY5",
+      "binary_path": "target/deploy/transaction_scheduler.so",
+      "description": "MetaPilot Transaction Scheduling and Gas Optimization Program"
+    }
+  },
+  "metadata": {
+    "created_at": "2025-08-23T12:45:30Z",
+    "last_updated": "2025-08-23T12:45:30Z",
+    "deployer_keypair": "keys/deployer.json",
+    "total_programs": 4,
+    "successful_deployments": 4,
+    "failed_deployments": 0,
+    "success_rate": "100%",
+    "deployment_tool": "MetaPilot Professional Deployment v1.0.0",
+    "rpc_url": "http://localhost:8899"
+  }
+}

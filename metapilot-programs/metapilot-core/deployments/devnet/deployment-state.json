@@ -1,0 +1,69 @@
+{
+  "network": "devnet",
+  "deployment_version": "2.0.0",
+  "programs": {
+    "dao-voting": {
+      "name": "dao-voting",
+      "program_id": "CSxir1KkCbcKZpmUuEouTL4uLzwL4C7MTYyZrkxcKjv1",
+      "status": "deployed",
+      "signature": "edMGXKtj5sDiVRbRraGM1xUUKv3AWUMVjKWv3cdC6RMibLRQedjUTtQYJennZ72Vzxr4F762UUASLmLNwVhx4PE",
+      "timestamp": "2025-08-26T14:51:36.358Z",
+      "description": "MetaPilot DAO Voting Automation Program",
+      "binary_path": "target/deploy/dao_voting.so",
+      "storage_size": 4096,
+      "deployer": "7seqthRHFrM9xP6dZAHv6KQH9An9rVvJaVp6wssG8rY5",
+      "network": "devnet",
+      "skipped": true
+    },
+    "token-automation": {
+      "name": "token-automation",
+      "program_id": "C7QmRHfSMg9YtcFyjGdfqA1PxBjZzefxxsBNggFTgcqR",
+      "status": "deployed",
+      "signature": "UrSzcAXwxaF5CEHsA9s3WytvTJs4bx95NBu6FvXNNLfEvrwDwVTwxxT9Q6wwm5MGHX9NHFXn2DbfQyEvSA8TJtp",
+      "timestamp": "2025-08-26T14:52:00.226Z",
+      "description": "MetaPilot Token Trading and Swap Automation Program",
+      "binary_path": "target/deploy/token_automation.so",
+      "storage_size": 4096,
+      "deployer": "7seqthRHFrM9xP6dZAHv6KQH9An9rVvJaVp6wssG8rY5",
+      "network": "devnet",
+      "skipped": true
+    },
+    "yield-optimizer": {
+      "name": "yield-optimizer",
+      "program_id": "uZWfyq9bwsiHUhLNXZKXEHkkbCpiin7Y3HvYNHDX4WQ",
+      "status": "deployed",
+      "signature": "4gdiwLT9TKuwmcUDEFRwVNFUaJy69VjERnuHY1tK5sbMzZZtbBhMKa4dAKLpDo5ifEM9DjRn7nExSGxCwrHeSZ1L",
+      "timestamp": "2025-08-26T14:57:06.996Z",
+      "description": "MetaPilot Yield Farming and DeFi Strategy Optimization Program",
+      "binary_path": "target/deploy/yield_optimizer.so",
+      "storage_size": 4096,
+      "deployer": "7seqthRHFrM9xP6dZAHv6KQH9An9rVvJaVp6wssG8rY5",
+      "network": "devnet",
+      "skipped": true
+    },
+    "transaction-scheduler": {
+      "name": "transaction-scheduler",
+      "program_id": "E4vpdUcGQd9bnzePzwJPKFNxrA5WARgFVzm77zfh2Hpe",
+      "status": "deployed",
+      "signature": "3LDf7R4B1JysNiEhF915KwN1HTvpn5ytF8UHnxzpjuFxeKSJiTiVLeC6jmAfvajV5v4bsy1eM2etrai4rGgexQFU",
+      "timestamp": "2025-08-26T21:01:14.996Z",
+      "description": "MetaPilot Transaction Scheduling and Gas Optimization Program",
+      "binary_path": "target/deploy/transaction_scheduler.so",
+      "storage_size": 4096,
+      "deployer": "7seqthRHFrM9xP6dZAHv6KQH9An9rVvJaVp6wssG8rY5",
+      "network": "devnet"
+    }
+  },
+  "metadata": {
+    "created_at": "2025-08-26T21:01:15.001Z",
+    "last_updated": "2025-08-26T21:01:15.001Z",
+    "deployer_keypair": "keys/deployer.json",
+    "deployer": "7seqthRHFrM9xP6dZAHv6KQH9An9rVvJaVp6wssG8rY5",
+    "total_programs": 4,
+    "successful_deployments": 4,
+    "failed_deployments": 0,
+    "success_rate": "100%",
+    "deployment_tool": "MetaPilot Professional Deployment v2.0",
+    "rpc_url": "https://api.devnet.solana.com"
+  }
+}
