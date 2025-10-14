@@ -210,6 +210,23 @@ const DocSidebar: React.FC<DocSidebarProps> = ({ sidebarOpen, setSidebarOpen, cu
         "Core Features": true
     });
     const [searchQuery, setSearchQuery] = useState('');
+    const [isDesktop, setIsDesktop] = useState(false);
+
+    // Check if desktop on mount and resize
+    React.useEffect(() => {
+        const checkIsDesktop = () => {
+            if (typeof window !== 'undefined') {
+                setIsDesktop(window.innerWidth >= 1024);
+            }
+        };
+        
+        checkIsDesktop();
+        
+        if (typeof window !== 'undefined') {
+            window.addEventListener('resize', checkIsDesktop);
+            return () => window.removeEventListener('resize', checkIsDesktop);
+        }
+    }, []);
 
     // Toggle category expansion
     const toggleCategory = (category: string) => {
@@ -247,8 +264,8 @@ const DocSidebar: React.FC<DocSidebarProps> = ({ sidebarOpen, setSidebarOpen, cu
             <motion.aside
                 className="fixed h-fit top-0 bottom-0 left-0 w-72 z-50 lg:z-0 bg-white dark:bg-slate-900/90 border-r border-slate-200 dark:border-slate-800 overflow-y-auto lg:sticky"
                 variants={sidebarVariants}
-                initial={window.innerWidth >= 1024 ? "open" : "closed"}
-                animate={window.innerWidth >= 1024 ? "open" : (sidebarOpen ? "open" : "closed")}
+                initial={isDesktop ? "open" : "closed"}
+                animate={isDesktop ? "open" : (sidebarOpen ? "open" : "closed")}
                 transition={{ duration: 0.3 }}
             >
                 <div className="sticky top-0 z-10 bg-white dark:bg-slate-900/90 border-b border-slate-200 dark:border-slate-800 p-4">

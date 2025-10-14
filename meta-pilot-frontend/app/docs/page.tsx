@@ -144,7 +144,7 @@ console.log(\`Task status: \${status}\`);`
 const DocumentationPage: React.FC = () => {
 
     const [activeTab, setActiveTab] = useState<string>("javascript");
-    const [sidebarOpen, setSidebarOpen] = useState<boolean>(window.innerWidth >= 1024);
+    const [sidebarOpen, setSidebarOpen] = useState<boolean>(false);
 
     const { toast } = useToast();
 
@@ -153,23 +153,39 @@ const DocumentationPage: React.FC = () => {
 
     // Add an effect to manage sidebar state on resize
     useEffect(() => {
+        // Initialize sidebar state based on screen size
+        const initializeSidebar = () => {
+            if (typeof window !== 'undefined') {
+                setSidebarOpen(window.innerWidth >= 1024);
+            }
+        };
+        
+        // Set initial state
+        initializeSidebar();
+        
         const handleResize = () => {
-            setSidebarOpen(window.innerWidth >= 1024);
+            if (typeof window !== 'undefined') {
+                setSidebarOpen(window.innerWidth >= 1024);
+            }
         };
 
-        window.addEventListener('resize', handleResize);
-        return () => window.removeEventListener('resize', handleResize);
+        if (typeof window !== 'undefined') {
+            window.addEventListener('resize', handleResize);
+            return () => window.removeEventListener('resize', handleResize);
+        }
     }, []);
 
 
 
     // Handle copy code to clipboard
     const handleCopyCode = (code: string) => {
-        navigator.clipboard.writeText(code);
-        toast({
-            title: "Code copied to clipboard",
-            description: "The code snippet has been copied to your clipboard.",
-        });
+        if (typeof navigator !== 'undefined' && navigator.clipboard) {
+            navigator.clipboard.writeText(code);
+            toast({
+                title: "Code copied to clipboard",
+                description: "The code snippet has been copied to your clipboard.",
+            });
+        }
     };
 
 
